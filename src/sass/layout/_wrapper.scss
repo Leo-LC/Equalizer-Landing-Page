@@ -1,0 +1,28 @@
+@use '../abstract/' as * ;
+
+body{
+    font-family: $primary-ff;
+    
+    background-image: url(../assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -350px;
+}
+
+.wrapper{
+    Width: min(100% - 2rem , 23.5rem);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* .wrapper > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 1em;
+    padding: 1em;
+} */
