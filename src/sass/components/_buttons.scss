@@ -1,6 +1,5 @@
 @use '../abstract' as *; 
 
-
 .buttons{
     display: flex;
     flex-direction: column;
@@ -18,13 +17,25 @@
     border-radius: 12px;
     border: none;
 
+    &:hover{
+        cursor: pointer;
+    }
+
 }
 .apple-button{
     background-color: $dark-color;
     color: $light-color;
+
+    &:hover{
+        background-color: $active-btn-1;
+    }
 }
 
 .android-button{
     background-color: $light-color;
     color: $dark-color;
+
+    &:hover{
+        background-color: $active-btn-2;
+    }
 }

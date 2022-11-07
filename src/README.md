@@ -8,3 +8,9 @@
 // Double check the copy / watch for "assets"
 // Create .gitignore 'public/' and 'node_modules/'
 // Run 'npm start'
+
+
+Questions : 
+
+Changer les couleurs d'un svg : filter ? pas inline img ? ...
+

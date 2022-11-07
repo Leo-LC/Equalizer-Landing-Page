@@ -1,25 +1,51 @@
-@use '../abstract' as *;
-@use '../base' as *;
+@use '../abstract'as *;
+@use '../base'as *;
+
+footer {
+    
+    @include mq($from: tablet) {
+        margin-top: 11rem;
+    }
+}
+
+.footer-wrapper {
+    @include mq($from: tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
 footer .logo {
     margin-block: 2rem;
 }
 
-.copyright{
+.copyright {
     max-width: 34ch;
     font-size: 1rem;
     line-height: 1.625rem;
     font-weight: $font-weight-400;
     margin-block-end: 2rem;
-    
-    .email{
-        font-weight: $font-weight-700;
-        text-decoration: none;
-        color: inherit;    
+
+    @include mq($from: tablet){
+        max-width: 40ch;
     }
 }
 
-.social-media{
+.email {
+    font-weight: $font-weight-700;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media {
     display: flex;
     gap: 2rem;
+
+}
+
+.social-icon:hover {
+    cursor: pointer;
+    filter: invert(63%) sepia(21%) saturate(5946%) hue-rotate(327deg) brightness(101%) contrast(96%);
+
 }
