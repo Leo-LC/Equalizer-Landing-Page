@@ -10,10 +10,16 @@ footer .logo {
     font-size: 1rem;
     line-height: 1.625rem;
     font-weight: $font-weight-400;
+    margin-block-end: 2rem;
     
     .email{
         font-weight: $font-weight-700;
         text-decoration: none;
         color: inherit;    
     }
+}
+
+.social-media{
+    display: flex;
+    gap: 2rem;
 }
