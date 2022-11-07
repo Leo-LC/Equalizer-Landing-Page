@@ -1,3 +1,9 @@
+@use '../base/' as *;
+
 .logo{
     width: 9.125rem;
+    
+    @include mq($from: desktop) {
+    margin-top: 2rem;  
+    }
 }

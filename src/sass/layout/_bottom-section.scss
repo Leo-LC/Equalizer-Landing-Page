@@ -6,12 +6,19 @@
     background-image: url(../../assets/bg-pattern-2.svg);
     background-size: 280px ;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position-x: 50%;
     background-position-y: -10px;
     border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center; 
+
+    @include mq($from : desktop){
+        background-size: 310px;
+        background-position-x: 35%;
+    }
+    
+
 }
 
 .preview{
@@ -22,6 +29,10 @@
     @include mq($from : tablet){
         max-width: 16.875rem;
         translate: -11rem -7rem;
+    }
+    @include mq($from : desktop){
+        max-width: 19.5rem;
+        translate: -24rem -14rem;
     }
 
 }
@@ -44,6 +55,11 @@
         translate: 5rem -24rem;
         margin-bottom: -30rem;
     }
+
+    @include mq($from : desktop){
+        translate: 14rem -32rem;
+        margin-bottom: -38rem; 
+    }
 }
 
 .informations {
@@ -55,6 +71,12 @@
         font-size: 2rem;
         line-height: 2.5rem;
         margin-bottom: 0.75rem;
+
+        @include mq($from : desktop){
+            font-size: 2.5rem;
+            line-height: 3.25rem;
+            padding-block: 1rem;
+        }
     }
 
     p {
@@ -64,6 +86,11 @@
 
         @include mq($from : tablet){
             max-width: 30ch;
+        }
+
+        @include mq($from : desktop){
+            font-size: 1.25rem;
+            line-height: 2.125rem;
         }
 
         .break {
@@ -81,5 +108,9 @@
             position: relative;
             bottom: 1rem;
         }
+    }
+
+    @include mq($from : desktop){
+        margin-inline: 1.25rem;
     }
 }

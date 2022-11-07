@@ -1,35 +1,55 @@
-@use '../abstract/' as *;
-@use '../base/' as *;
+@use '../abstract/'as *;
+@use '../base/'as *;
 
 
-.top-section{
+.top-section {
   margin-bottom: 9rem;
+
+  @include mq($from: tablet) {
+    margin-top: 4rem;
+  }
+
+  @include mq($from: desktop) {
+   margin-bottom: 18rem;
+  }
 
 }
 
-h1{
+h1 {
   font-weight: $font-weight-700;
   color: $dark-color;
   font-size: 2.5rem;
   line-height: 3rem;
   padding-block: 2rem;
-  
-  @include mq($from: tablet){
+
+  @include mq($from: tablet) {
     font-size: 4rem;
     line-height: 4rem;
     max-width: min-content;
-    }
+  }
+
+  @include mq($from: desktop) {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+    max-width: 20ch;
+  }
 
 }
 
-.description{
-    font-weight: $font-weight-400;
-    font-size: 1rem;
-    line-height: 1.625rem;
+.description {
+  font-weight: $font-weight-400;
+  font-size: 1rem;
+  line-height: 1.625rem;
 
-    @include mq($from: tablet){
-      font-size: 1.125rem;
+  @include mq($from: tablet) {
+    font-size: 1.125rem;
     line-height: 1.75rem;
     max-width: 47ch;
-    }
+  }
+
+  @include mq($from: desktop) {
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    max-width: 70ch;
+  }
 }

@@ -2,22 +2,35 @@
 @use '../base'as *;
 
 footer {
-    
+
     @include mq($from: tablet) {
         margin-top: 11rem;
     }
+
+    @include mq($from: desktop) {
+        display: flex;
+    }
 }
+
+
 
 .footer-wrapper {
     @include mq($from: tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-wrap: wrap;
     }
 }
 
 footer .logo {
     margin-block: 2rem;
+
+    @include mq($from: desktop){
+        margin-right: 200px;
+    }
 }
 
 .copyright {
@@ -27,7 +40,7 @@ footer .logo {
     font-weight: $font-weight-400;
     margin-block-end: 2rem;
 
-    @include mq($from: tablet){
+    @include mq($from: tablet) {
         max-width: 40ch;
     }
 }
@@ -41,7 +54,6 @@ footer .logo {
 .social-media {
     display: flex;
     gap: 2rem;
-
 }
 
 .social-icon:hover {
